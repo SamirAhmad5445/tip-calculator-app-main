@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [https://github.com/SamirAhmad5445/tip-calculator-app-main](https://github.com/SamirAhmad5445/tip-calculator-app-main)
+- Live Site URL: [https://samirahmad5445.github.io/tip-calculator-app-main/](https://samirahmad5445.github.io/tip-calculator-app-main/)
 
 ## My process
 ### build with
