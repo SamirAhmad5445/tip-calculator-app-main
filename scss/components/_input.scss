@@ -1,0 +1,39 @@
+/* components { Input } */
+
+@use '../abstracts' as *;
+
+.input-field {
+  display: block;
+  background-color: accent(2);
+  color: neutral(1);
+  padding: size(1);
+  width: 100%;
+  border: 2px solid transparent;
+  border-radius: size(1);
+  caret-color: primary(1);
+  font-weight: 500;
+  overflow: hidden;
+  direction: rtl;
+  &:is(:hover, :focus, :focus-within) {
+    border-color: primary(1)
+  }
+  &:is(.active) {
+    color: primary(1);
+  }
+}
+
+.input-container {
+  position: relative;
+  // &:is(.mandatory) {
+  //   &:is( * + .modified)::before {
+  //     content: "can't be zero";
+  //     position: absolute;
+  //     right: size(2);
+  //     font-size: size(3);
+  //     color: var(--mandatory);
+  //   }
+  //   > .input-field:is(.modified):where(:hover, :focus, :focus-within) {
+  //     border-color: var(--mandatory);
+  //   }
+  // }
+}

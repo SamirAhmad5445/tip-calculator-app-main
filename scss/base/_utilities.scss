@@ -1,0 +1,65 @@
+/* ========================
+  Utillties 
+  ======================== */
+
+@use '../abstracts' as *;
+
+/* text colors utilities */
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .text-#{$color}-#{$shade} {
+      color: var(--clr-#{$color}-#{$shade});
+    }
+  }
+} 
+
+/* background colors utilities */
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--clr-#{$color}-#{$shade});
+    }
+  }
+} 
+
+/* spacing utilities { padding }*/
+@for $num from 1 through length($sizes) {
+  .padding-#{$num} {
+    padding: size($num);
+  }
+}
+
+/* spacing utilities { margin }*/
+@for $num from 1 through length($sizes) {
+  .margin-#{$num} {
+    margin: size($num);
+  }
+}
+
+$sides: top, right, bottom, left;
+@each $side in $sides {
+  .push-#{$side} {
+    margin-#{$side}: auto;
+  }
+}
+
+/* border-radius utilities */
+@for $num from 1 through length($sizes) {
+  .radius-#{$num} {
+    border-radius: size($num);
+  }
+}
+
+/* font-sizes utilities */ 
+@for $num from 1 through length($sizes) {
+  .fs-#{$num} {
+    font-size: size($num);
+  }
+}
+
+/* font-weights utilities */
+@for $weight from 4 to 9 {
+  .fw-#{$weight * 100} {
+    font-weight: $weight * 100;
+  }
+}

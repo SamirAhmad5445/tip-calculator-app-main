@@ -1,0 +1,10 @@
+/* components { Label } */
+
+@use '../abstracts' as *;
+
+label, 
+.label {
+  display: inline-block;
+  font-size: size(3);
+  margin-block-end: size(2);
+}

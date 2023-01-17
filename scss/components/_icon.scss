@@ -1,0 +1,26 @@
+/* components { Icons } */
+
+@use '../abstracts' as *;
+
+.icon{
+  // position: relative;
+  &:where([data-pos=inline]) {
+    // position: absolute;
+    height: calc(size(4) + size(1));
+  }
+
+  &:where([data-pos=inside]) {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: size(5);
+    height: size(5);
+    background-color: accent(2);
+    bottom: size(2);
+    left: size(1);
+    pointer-events: none;
+    > * {
+      height: size(4);
+    }
+  }
+}

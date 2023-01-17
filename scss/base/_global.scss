@@ -1,0 +1,48 @@
+/* ========================
+  Globel Styles 
+  ======================== */ 
+
+@use 'sass:color';
+@use '../abstracts' as *;
+
+
+html {
+  height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+ 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+::selection {
+  background-color: var(--selection);
+  color: accent(2);
+}
+
+body {
+  height: 100%;
+  background-color: accent(1);
+  color: neutral(1);
+  padding-block-start: size(9);
+  @include media(mobile) {
+    padding-block-start: size(8);
+  }
+  font-family: monospace;
+  font-size: size(4);
+}
+
+// img {
+//   min-width: 100%;
+// }
+
+input, button {
+  font: inherit;
+  outline: none;
+  cursor: pointer;
+}

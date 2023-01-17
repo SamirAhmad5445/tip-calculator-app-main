@@ -1,0 +1,37 @@
+/* ========================
+  Block Level 
+  ======================== */
+
+@use '../abstracts' as *;
+
+.logo {
+  width: fit-content;
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+}
+
+@include media(tablet, max) {
+  .logo img {
+    width: 150%;
+  }
+}
+.splitter {
+  border-radius: size(2);
+  box-shadow: 0 size(2) size(2) calc(size(2) * -1) neutral(2);
+  @include media(tablet, max) {
+    max-width: calc(size(9) * 4);
+    margin-inline: auto;
+    border-radius: size(3);
+    box-shadow: 0 40vmin 0 0 accent(3);
+  }
+}
+
+.output-section {
+  max-height: convert(300px);
+  // margin-inline: clamp(0, size(5),calc(size(9) + size(6) + size(1)));
+}
+
+[class*=result] {
+  font-size: size(6);
+}

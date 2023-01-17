@@ -1,0 +1,29 @@
+@use 'sass:color';
+
+$colors: (
+  primary: (
+    1: hsl(172, 67%, 45%),
+    2: hsl(183, 100%, 15%)
+  ),
+  neutral: (
+    1: hsl(186, 14%, 43%),
+    2: hsl(186, 14%, 56%),
+  ),
+  accent: (
+    1: hsl(185, 41%, 84%),
+    2: hsl(180, 37%, 97%),
+    3: hsl(0, 0%, 100%)
+  )
+);
+
+$btn-hover: color.mix(
+  map-get($colors, accent, 1),
+  map-get($colors, primary, 1)
+);
+
+$selection: color.mix(
+  map-get($colors, primary, 1),
+  map-get($colors, neutral, 2)
+);
+
+$mandatory: hsl(356, 92%, 44%);

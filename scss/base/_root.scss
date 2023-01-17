@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+:root {
+  /* colors custom props */
+  @each $color, $shades in $colors {
+    /* #{$color} */
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+  /* special colors */
+  --btn-hover: #{$btn-hover};
+  --selection: #{$selection};
+  --mandatory: #{$mandatory};
+  /* sizes custom props */
+  @each $number, $value in $sizes {
+    --size-#{$number}: #{$value};
+  }  
+  @include media(tablet, max) {
+    @each $size, $value in $small-sizes {
+      --size-#{$size}: #{$value};
+    }
+  } 
+}

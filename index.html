@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Frontend Mentor favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+</head>
+<body>
+  <main class="flaw-root" style="--flaw-gap: var(--size-7)">
+    <div class="logo"><img src="images/logo.svg" alt="splitter"></div>
+    <div class="splitter | even-columns | bg-accent-3 padding-4">
+      <section class="flaw-root" style="--flaw-gap: var(--size-4)">
+        <div class="input-container">
+          <div class="icon" data-pos="inside"><img src="./images/icon-dollar-accent.svg" alt=""></div>
+          <label for="bill">Bill</label>
+          <input class="input-field | fs-5" type="number"placeholder="0" name="bill" id="bill">
+        </div>
+        <div>
+          <span class="label">Select Tip %</span>
+          <div class="btn-group">
+            <button class="btn"> 5%</button>
+            <button class="btn">10%</button>
+            <button class="btn">15%</button>
+            <button class="btn">25%</button>
+            <button class="btn">50%</button>
+            <input class="input-field" type="number" placeholder="Custom" id="customTip">
+          </div>
+        </div>
+        <div class="input-container mandatory">
+          <div class="icon" data-pos="inside" ><img src="./images/icon-person.svg" alt=""></div>
+          <label for="numberOfPeople">Number of People</label>
+          <input class="input-field | fs-5" type="number" placeholder="0" name="people" id="numberOfPeople">
+        </div>
+      </section> 
+      <section class="output-section | grid-flaw | bg-primary-2 text-primary-1 padding-4 radius-2 fw-600" style="--flaw-gap: var(--size-3)">
+        <div class="flex-flaw">
+          <p class="text-accent-1 fs-3 fw-700">Tip Amount<br><span class="text-neutral-1 fs-3">/ person</span></p>
+          <div class="tip-result"><img class="icon" data-pos="inline" src="./images/icon-dollar-primary.svg" alt=""><span>0.00</span></div>
+        </div>
+        <div class="flex-flaw">
+          <p class="text-accent-1 fs-3 fw-700">Total<br><span class="text-neutral-1 fs-3">/ person</span></p>
+          <div class="total-result"><img class="icon" data-pos="inline" src="./images/icon-dollar-primary.svg" alt=""><span>0.00</span></div>
+        </div>
+        <button class="btn push-top" data-btn="inverted" style="align-self: end;" id="reset">Reset</button>
+      </section>
+    </div>
+  </main>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="mailto:samirahmad5445@gmail.com">samirahmad5445@gmail.com</a>.
+  </div> -->
+</body>
+</html>

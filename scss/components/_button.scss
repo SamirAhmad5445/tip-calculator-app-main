@@ -1,0 +1,52 @@
+/* components { Button }*/
+
+@use 'sass:color';
+@use '../abstracts' as *;
+
+.btn {
+  display: inline-block;
+  padding: size(2) size(4);
+  border: none;
+  width: clamp(size(8),size(9),calc(size(7) * 2));
+  border-radius: size(1);
+  background-color: primary(2);
+  color: accent(1);
+  cursor: pointer;
+  + input {
+    width: clamp(size(8),size(9),calc(size(7) * 2));
+    height: convert(34px, rem);
+    @include media(tablet, max) {
+      height: convert(40px, rem);
+    }
+  }
+
+  &:is(:hover, :focus) {
+    background-color: var(--btn-hover);
+    color: primary(2);
+  }
+
+  &:is(.active) {
+    background-color: primary(1);
+    color: primary(2);
+  }
+
+  &:where([data-btn=inverted]) {
+    width: 100%;
+    background-color: primary(1);
+    color: primary(2);
+
+    &:is(:hover, :focus) {
+      background-color: var(--btn-hover);
+      color: primary(2);
+    }
+  }
+
+  &-group {
+    width: fit-content;
+    margin-inline: auto;
+    @include max-column(3);
+    @include media(mobile) {
+      @include max-column(2, size(2) size(4));
+    }
+  }
+}

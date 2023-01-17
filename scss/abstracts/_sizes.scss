@@ -1,0 +1,27 @@
+$base: 1rem;
+
+$sizes: (
+  1: $base * .25,
+  2: $base * .5,
+  3: $base * .75,
+  4: $base * 1,
+  5: $base * 1.5,
+  6: $base * 2,
+  7: $base * 2.5,
+  8: $base * 3,
+  9: $base * 5
+);
+
+$base: 1.5rem;
+
+$small-sizes: (
+  1: $base * .25,
+  2: $base * .5,
+  3: $base * .75,
+  4: $base * 1,
+  5: $base * 1.5,
+  6: $base * 2,
+  7: $base * 2.5,
+  8: $base * 3,
+  9: $base * 5
+);

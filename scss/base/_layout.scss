@@ -1,0 +1,40 @@
+/* ========================
+  Composition 
+  ======================== */
+
+@use '../abstracts' as *;
+
+.flaw-root {
+  max-width: var(--root-max-width, 32rem);
+  // width: calc(100% - 2 * var(--flaw-padding, size(4)));
+  margin-inline: auto;
+  > * + * {
+    margin-block-start: var(--flaw-gap, size(4));
+  }
+}
+
+.flex-flaw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid-flaw {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr;
+  gap: var(--grid-gap, size(6));
+}
+
+.even-columns {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: var(--even-columns-gap,  size(3));
+  > * {
+    flex: 1;
+  }
+
+  @include media(tablet, max) {
+    flex-direction: column;
+  }
+}

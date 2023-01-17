@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:math';
+@use 'functions' as *;
+@use 'breakpoints' as *;
+
+// max columns count mixin
+@mixin max-column($count, $gap: size(2)) {
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  gap: $gap;
+  @for $i from 1 through $count {
+    > :nth-child(#{$count}n + #{$i}) {
+      grid-column: $i;
+    }
+  }
+}
+
+// @media query mixin
+@mixin media($point, $range: if($point == mobile, max, min)) {
+  // if $point is a kay in $breakpoints
+  @if map-has-key($breakpoints, $point) {
+    @media (#{$range}-width: get-point($point)) {
+      @content;
+    } // if not, is it a number
+  } @else if meta.type-of($point) == number {
+    @media (#{$range}-width: convert($point)) {
+      @content;
+    }
+  } @else {
+    @error 'the mixin media() require a $key in the $breakpoints map Or a number by pixels';
+  }
+}
