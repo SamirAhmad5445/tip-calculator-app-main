@@ -45,7 +45,7 @@ Users should be able to:
 - [CUBECSS](https://cube.fyi/) - CSS naming convention 
 - Flexbox
 - CSS Grid
-- [SASS](https://sass-lang.com/) - CSS preprosser
+- [SASS](https://sass-lang.com/) - CSS preprocesser
 
 ### What I learned
 this project was an training for me on sass,i had learned how to use @use and @forword to import my sass parcial instead of the debrecated @import, and also it's my fisrt time using the input event in JavaScript.
@@ -106,7 +106,7 @@ const buttonsDeactivate = function() {
 ```
 ### Continued development
 
-I would learn more about SASS and the CSS Preprossers and also I would like to get into the world of JavaScript Frameworks and inprove my frontend skills with Good Fundamentals, Practical Applications, and by learning more technologies like PostCSS and gulp to increase the efficience of my code. 
+I would learn more about SASS and the CSS Preprocessers and also I would like to get into the world of JavaScript Frameworks and inprove my frontend skills with Good Fundamentals, Practical Applications, and by learning more technologies like PostCSS and gulp to increase the efficience of my code. 
 
 ## find me on
 - GitHub - [@SamirAhmad5445](https://github.com/SamirAhmad5445)
